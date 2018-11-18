@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>42度空间-多行内联元素垂直居中-伪元素</title>
+    <style>
+        .ghost-center {
+            position: relative;
+            border: 2px dashed #f69c55;
+            padding: 10px 0;
+        }
+        .ghost-center::before {
+            content: " ";
+            display: inline-block;
+            height: 100%;
+            width: 3%;
+            vertical-align: middle;
+        }
+        .ghost-center p {
+            display: inline-block;
+            vertical-align: middle;
+            width: 12rem;
+            padding:1rem;
+            color:#fff;
+            background:#000;
+        }
+    </style>
+</head>
+<body>
+<div class="ghost-center">
+    <p>利用“精灵元素”(ghost element)技术实现垂直居中，即在父容器内放一个100%高度的伪元素，让文本和伪元素垂直对齐，从而达到垂直居中的目的。
+    </p>
+</div>
+</body>
+</html>
+

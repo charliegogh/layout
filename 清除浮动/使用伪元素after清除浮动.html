@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            padding: 10px;
+            background: gray;
+        }
+
+        .l {
+            float: left;
+        }
+
+        .box:after {
+            display: block;
+            content: "clear";
+            height: 0;
+            clear: both;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <img class="l" src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg"/>
+</div>
+
+</body>
+</html>

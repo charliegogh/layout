@@ -1,0 +1,11 @@
+/*匹配模式*/
+.triangle(@_,@w,@c){
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.triangle(T,@w,@c){
+  border-width: @w;
+  border-style: solid;
+  border-color: @c transparent transparent transparent;
+}

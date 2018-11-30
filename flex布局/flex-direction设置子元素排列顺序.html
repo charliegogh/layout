@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.main{
+				width: 1200px;
+				border: 1px solid red;
+				display: flex;      /*盒子类型展示*/
+				flex-wrap: wrap;  /*写给父元素，wrap表示换行*/
+				/*flex-direction: row;*/  /*正向排列*/
+				/*flex-direction: row-reverse;*/   /*反向排列*/
+				flex-direction: column;/*从上往下        column-revarse 反向*/
+				
+			}
+			.box{
+				width: 400px;
+				height:300px;
+			}
+			.one{
+				background:red;
+				/*拉伸比例*/
+			}
+			.two{
+				background:blue;
+				
+			}
+			.three{
+				background:yellow;
+			}
+			.four{
+						background:green;
+						flex-grow:1 ;
+			}
+			.five{
+						background:pink;
+						flex-grow: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="box one">
+				1
+			</div>
+						<div class="box two">
+							2
+			</div>
+
+			<div class="box three">
+				3
+			</div>
+
+			<div class="box four">
+				4
+			</div>
+
+			<div class="box five">
+				5
+			</div>
+			
+
+		</div>
+	</body>
+</html>

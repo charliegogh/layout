@@ -1,0 +1,80 @@
+/*这样注释的话可以看到*/
+/*混合
+1.普通混合使用.开始 ()表示不被编译
+2.()不带输出混合
+3.带参数的混合 .less(@w,@h,@c)
+4.带参数并且有默认参数的混合 @w:10px
+5.带多个参数的混合
+6.命令参数    当形参和实参不一致,直接以参数名形式添加
+7.匹配模式
+    @_定义共同的css样式
+    可以创建自己的less图形库
+8.arguments变量
+ */
+.wrapper {
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+}
+.wrapper .item1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+.wrapper .item1:hover {
+  background: green;
+}
+.wrapper .item2 {
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+/*匹配模式*/
+.triangle {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 40px;
+  border-style: solid;
+  border-color: red transparent transparent transparent;
+}
+.charlie {
+  border: 1px solid red;
+}
+/*继承*/
+.center,
+.wrap .item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.center:hover,
+.wrap .item:hover {
+  background: red !important;
+}
+.wrap {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: #0000FF;
+}
+.wrap .item:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  background: black;
+}
+.wrap .item:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+}
+/*避免编译*/
+.avoid_compile {
+  width: 100px;
+  height:  calc(100px - 50px);
+  background: #0f0f0f;
+}
+/*# sourceMappingURL=less.css.map */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.main{
+				width: 1200px;
+				border: 1px solid red;
+				display: flex;
+				height: 1000px;
+				flex-wrap: wrap;
+				flex-direction: row;
+				/*设置当前元素在纵轴方向的对齐方式*/
+				/*顶部显示*/
+				/*align-content: flex-start;*/
+				/*底部显示*/
+				/*align-content: flex-end;*/
+				/*中间加载*/
+				/*不能设置固定高度  纵行方向铺满整个高度*/
+				/*align-content: stretch;*/
+				/*align-content: center;*/
+
+			}
+			.box{
+				width: 400px;
+				height:300px;
+			}
+			.one{
+				background:red;
+				/*拉伸比例*/
+			}
+			.two{
+				background:blue;
+
+			}
+			.three{
+				background:yellow;
+			}
+			.four{
+						background:green;
+						flex-grow:1 ;
+			}
+			.five{
+						background:pink;
+						flex-grow: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="box one">
+				1
+			</div>
+						<div class="box two">
+							2
+			</div>
+
+			<div class="box three">
+				3
+			</div>
+
+			<div class="box four">
+				4
+			</div>
+
+			<div class="box five">
+				5
+			</div>
+
+
+		</div>
+	</body>
+</html>

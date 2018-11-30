@@ -1,0 +1,89 @@
+/*这样注释的话可以看到*/
+//这样注释解析到css之后看不到
+
+
+/*混合
+1.普通混合使用.开始 ()表示不被编译
+2.()不带输出混合
+3.带参数的混合 .less(@w,@h,@c)
+4.带参数并且有默认参数的混合 @w:10px
+5.带多个参数的混合
+6.命令参数    当形参和实参不一致,直接以参数名形式添加
+7.匹配模式
+    @_定义共同的css样式
+    可以创建自己的less图形库
+8.arguments变量
+ */
+
+//使用变量
+//定义属性值
+@color:pink;
+
+//定义属性名
+@m:margin;
+
+//定义标签
+@selector:wrap;
+.wrapper{
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+  .item1{
+    .less();
+    //&使用,解决:hover出现空格的问题
+    &:hover{
+      background: green;
+    }
+  }
+  .item2{
+    .less(@c: black);
+  }
+}
+.less(@w:100px,@h:100px,@c:red){
+  width: @w;
+  height: @h;
+  background: @c;
+}
+//引入三角形库
+@import "./triangle";
+.triangle{
+  .triangle(T,40px,red)
+}
+//arguments 变量使用
+.charlie(@w,@c,@e){
+  border: @arguments;
+}
+.charlie{
+  .charlie(1px,solid,red)
+}
+/*继承*/
+@import "./mixin";
+.wrap{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: #0000FF;
+  .item{
+      &:extend(.center all);
+      &:nth-child(1){
+        width: 200px;
+        height: 200px;
+        background: black;
+      }
+      &:nth-child(2){
+        width: 100px;
+        height: 100px;
+        background: yellow;
+    }
+  }
+}
+/*避免编译*/
+.avoid_compile{
+  width: 100px;
+  height: ~" calc(100px - 50px)";
+  background: #0f0f0f;
+}
+
+
+
+

@@ -1,0 +1,173 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper div {
+  margin-top: 30px;
+}
+/*匹配模式*/
+.star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: red;
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+.star-five:before {
+  border-bottom: 80px solid red;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+.star-five:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 3px;
+  left: -105px;
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+.hexagon {
+  width: 100px;
+  height: 55px;
+  background: red;
+  position: relative;
+}
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid red;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid red;
+}
+.talkbubble {
+  width: 120px;
+  height: 80px;
+  background: red;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid red;
+  border-bottom: 13px solid transparent;
+}
+.tv {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin: 20px 0;
+  background: red;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: 0.1em;
+}
+.tv:before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 5% / 50%;
+}
+.pacman {
+  width: 0;
+  height: 0;
+  border-right: 60px solid transparent;
+  border-top: 60px solid red;
+  border-left: 60px solid red;
+  border-bottom: 60px solid red;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 40px;
+  border-style: solid;
+  border-color: transparent transparent transparent red;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: red;
+}
+.oval {
+  width: 200px;
+  height: 100px;
+  border-radius: 100px / 50px;
+  background: red;
+}
+.trapezoid {
+  border-bottom: 100px solid red;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 100px;
+}
+.parallelogram {
+  width: 200px;
+  height: 200px;
+  transform: skew(20deg);
+  background: red;
+}
+.star-five {
+  margin-top: 50px !important;
+}
+.egg {
+  display: block;
+  width: 126px;
+  height: 180px;
+  background-color: red;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+/*# sourceMappingURL=index.css.map */

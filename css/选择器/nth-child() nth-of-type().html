@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p:first-child(1){
+            color: blue;
+        }
+
+        p:nth-child(2){
+            color: red;
+        }
+        /*p:nth-of-type(3){*/
+            /*color: red;*/
+        /*}*/
+    </style>
+</head>
+<body>
+  两者区别:nth:child() 按个数计算
+  nth-of-type 按照类型计算
+  <div class="box">
+    <p>一</p>
+    <p>二</p>
+    <span> 这是第一个 span</span>
+    <p>三</p>
+    <span>这是地儿个 span</span>
+    <p>五</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试内边距</title>
+    <meta charset="utf-8">
+    <!-- 调用CSS样式表 -->
+    <style type="text/css">
+        /*定义p标签，是实线边框*/
+        p {border-style: solid;}
+
+        .all {
+            /*定义所有边框宽度为5像素*/
+            border-width: 5px;
+            /*定义所有边框是颜色为橙色*/
+            border-color: #FF8000
+        }
+        .top {
+            /*定义上边框宽度为5像素*/
+            border-top-width: 5px;
+            /*定义上边框是颜色为橙色*/
+            border-top-color: #FF8000
+        }
+        .bottom {
+            /*定义下边框宽度为5像素*/
+            border-bottom-width: 5px;
+            /*定义下边框是颜色为橙色*/
+            border-bottom-color: #FF8000
+        }
+        .left {
+            /*定义左边框宽度为5像素*/
+            border-left-width: 5px;
+            /*定义左边框是颜色为橙色*/
+            border-left-color: #FF8000
+        }
+        .right {
+            /*定义右边框宽度为5像素*/
+            border-right-width: 5px;
+            /*定义右边框是颜色为橙色*/
+            border-right-color: #FF8000
+        }
+    </style>
+</head>
+<body>
+<p class="all">我是设置所有边框的</p>
+<p class="top">我只负责上面</p>
+<p class="bottom">我负责下面</p>
+<p class="left">我设置的是左边</p>
+<p class="right">我设置的是右边</p>
+</body>
+</html>

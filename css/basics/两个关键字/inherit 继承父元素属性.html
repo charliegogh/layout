@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span
+        {
+            color: blue;
+            border:1px solid black;
+        }
+        .extra span
+        {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<!--颜色是不能继承的,inherit就是设置继承父元素的属性-->
+
+
+
+<div>
+    这里是一个蓝色的 <span>span 元素</span>，正如 span 元素所设置的。
+</div>
+
+<div class="extra" style="color:green">
+    这里是一个绿色的 <span>span 元素</span>，因为它继承了父元素。
+</div>
+
+<div style="color:red">
+    这里是一个蓝色的 <span>span 元素</span>，正如 span 元素所设置的。
+</div>
+</body>
+</html>

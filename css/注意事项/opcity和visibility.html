@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>研究透明度与隐藏的区别</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+        .divHolder{
+            display: inline-block;
+            width: 200px;
+            height: 300px;
+            background-color: yellow;
+            border:1px solid black;
+        }
+        .divHolder > div{
+            display: block;
+            width: 100%;
+            height: 100px;
+        }
+        .hiddenDiv{
+            visibility: hidden;
+        }
+        .invisibleDiv{
+            opacity: 0.0;
+        }
+        .visibleDiv{
+            background-color: gray;
+        }
+    </style>
+    <script type="text/javascript">
+        function mouseevent() {
+            alert("触发了事件！");
+        }
+    </script>
+</head>
+<body>
+左右两个大div中各有三个小div，小div尺寸相同。
+第一个hidden，第二个opacity=0，第三个正常显示。
+通过调试窗口可发现，浏览器能发现不透明度为0的div，
+但发现不了隐藏的div！
+<div class="divHolder">
+    <div class="hiddenDiv" onclick="mouseevent()">点击触发事件</div>
+    <div class="invisibleDiv" onclick="mouseevent()">点击触发事件</div>
+    <div class="visibleDiv" onclick="mouseevent()">鼠标点击触发事件</div>
+
+</div>
+<div class="divHolder">
+    <div class="hiddenDiv" onmouseover="mouseevent()">覆盖触发</div>
+    <div class="invisibleDiv" onmouseover="mouseevent()">覆盖触发</div>
+    <div class="visibleDiv" onmouseover="mouseevent()">鼠标覆盖时触发事件</div>
+
+</div>
+</body>
+</html>

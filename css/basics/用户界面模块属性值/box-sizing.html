@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#aa{
+				/*浏览器实际宽度为240px*/
+				box-sizing: content-box;
+				padding: 10px;
+				width: 200px;
+				height: 200px;
+				background: blue;
+				border: 10px solid red;
+			}
+			#bb{
+				/*W3C标准的盒子样式*/
+					box-sizing: border-box;
+				padding: 10px;
+				width: 200px;
+				height: 200px;
+				background: blue;
+				border: 10px solid red;
+				margin-top: 10px;
+
+			}
+			#cc{
+				/*默认的浏览器样式*/
+					padding: 10px;
+				width: 200px;
+				height: 200px;
+				background: blue;
+				border: 10px solid red;
+			}
+			</style>
+	</head>
+	<body>
+		<div id="aa">
+			</div>
+			<div id="bb">
+
+			</div>
+			<div id="cc">
+
+			</div>
+	</body>
+</html>

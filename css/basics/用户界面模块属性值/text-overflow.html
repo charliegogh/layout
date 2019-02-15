@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.aa{
+				width: 150px;
+				height: 150px;
+				border: 1px solid red;
+				/***************单行省略*/
+				white-space: nowrap;
+				/*阻止换行*/
+				text-overflow: ellipsis;
+				/*ellipsis：省略号*/
+				overflow: hidden;
+			}
+			.bb{
+				width: 150px;
+				height: 150px;
+				border: 1px solid red;
+				/*加载文字的盒子，以盒模型展示，让盒子文字内容垂直排列*/
+				text-overflow: ellipsis;/*溢出部分替换*/
+				overflow: hidden;   /*必须项*/
+				display: -webkit-box;  /*以盒模型展示*/
+				-webkit-box-orient: vertical;  /*    确定box方向，vartical垂直显示*/
+				-webkit-line-clamp:7 ;/*展示行数*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aa">
+			内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		</div>
+				<div class="bb">
+			内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容	内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		</div>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试内边距</title>
+    <meta charset="utf-8">
+    <!-- 调用CSS样式表 -->
+    <style type="text/css">
+        .divtest {
+            /*定义颜色为橙色*/
+            background-color: #FF8000;
+            width: 300px;
+            height: 300px;
+
+            /*设置圆角为20像数*/
+            border-radius: 20px;
+
+            /*第1个值是阴影向右移动5个像数
+              第2个值是阴影向下移动5个像数
+              第3个值是阴影模糊度的属性
+              第4个值是阴影的颜色，我设置是黑色
+              默认是外部阴影，所以我没有设置outset*/
+            box-shadow: 5px 5px 5px black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="divtest"></div>
+</body>
+</html>

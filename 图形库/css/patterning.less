@@ -1,0 +1,203 @@
+/*匹配模式*/
+.triangle(@_,@w,@c){
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+//向上
+.triangle(up,@w,@c){
+  border-width: @w;
+  border-style: solid;
+  border-color:  transparent  transparent  @c transparent;
+}
+//向下
+.triangle(down,@w,@c){
+  border-width: @w;
+  border-style: solid;
+  border-color:@c  transparent transparent  transparent;
+}
+//向左
+.triangle(left,@w,@c){
+  border-width: @w;
+  border-style: solid;
+  border-color:  transparent @c transparent transparent;
+}
+
+//向右
+.triangle(right,@w,@c){
+  border-width: @w;
+  border-style: solid;
+  border-color: transparent transparent transparent @c;
+}
+//圆
+.circle(@w,@h,@c){
+  width: @w;
+  height: @h;
+  border-radius:50%;
+  background: @c;
+}
+//椭圆
+.oval(@w,@h,@c){
+  width: @w;
+  height: @h;
+  border-radius:@h~"/"(@h/2);
+  background: @c;
+}
+//梯形
+.trapezoid(@w,@c){
+  border-bottom: @w solid @c;
+  border-left: @w/4 solid transparent;
+  border-right: @w/4 solid transparent;
+  height: 0;
+  width: @w;
+}
+
+//平行四边形
+.parallelogram(@w,@h,@c){
+  width:@w;
+  height: @h;
+  transform: skew(20deg);
+  background: @c;
+}
+
+.star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: red;
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+  &:before{
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  &:after{
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+}
+
+
+//六边形
+
+.hexagon {
+  width: 100px;
+  height: 55px;
+  background: red;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid red;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid red;
+  }
+}
+
+//鸡蛋
+.egg(@w,@h,@c){
+  display: block;
+  width: @w;
+  height: @h;
+  background-color: @c;
+  border-radius: ~"50% 50% 50% 50% / 60% 60% 40% 40%";
+}
+
+
+//对话泡泡
+
+.talkbubble {
+  width: 120px;
+  height: 80px;
+  background: red;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  &:before{
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid red;
+    border-bottom: 13px solid transparent;
+  }
+}
+
+//tv
+.tv{
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin: 20px 0;
+  background: red;
+  border-radius: ~"50% / 10%";
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius:~"5% / 50%";
+  }
+}
+
+
+.pacman {
+  width: 0;
+  height: 0;
+  border-right: 60px solid transparent;
+  border-top: 60px solid red;
+  border-left: 60px solid red;
+  border-bottom: 60px solid red;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}

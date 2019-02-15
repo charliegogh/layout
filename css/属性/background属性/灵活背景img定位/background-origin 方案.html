@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div{
+
+            /* 关键样式 */
+            background: url(../../image/pause.png)
+            no-repeat bottom right #58a;
+            background-origin: content-box;
+            padding: 10px 20px;
+            /* 其它样式 */
+            max-width: 10em;
+            min-height: 5em;
+            font: 100%/1 sans-serif;
+
+
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    兼容性问题解决方案
+</div>
+<p>
+    实现要点：
+    background-origin 默认值是 padding-box，也就说我们设置 background 为 top left 时左上角是 padding box（内边距的外沿框）的左上角。
+    在本例中设置 background-origin 为 content-box，那么就相对于 content box（内容区的外沿框）的左上角，那么也就是背景图离容器的右边和底边的偏移量是跟着容器的 padding 值走了，那设置 padding: 10px 20px; 自然就可以实现本例的效果了。
+</p>
+</body>
+</html>

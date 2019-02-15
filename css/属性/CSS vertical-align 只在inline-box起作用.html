@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>.box {
+        background: black;
+        color: white;
+        padding-left: 20px;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background: white;
+        /*以上为默认属性*/
+        /*bottom*/
+        /*vertical-align: bottom;*/
+        /*vertical-align: text-bottom;*/
+        /*表现相同，添加line-height会出现不同的效果*/
+        vertical-align: middle;
+        /*vertical-align: bottom;*/
+
+    }
+
+    </style>
+</head>
+<body><span class="box">
+    <span class="dot"></span>
+    理清一点：vertical-algin：只会在inline-block上起作用，影响到的元素涉及inline属性的元素
+</span>
+
+
+</body>
+</html>
